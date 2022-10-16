@@ -1,0 +1,29 @@
+#Introduction and Features of Java
+
+Java is a high-level, general-purpose programming language developed by a small team, headed by James Gosling and Patrick Naughton at Sun Microsystems in 1991. It is currently owned by Oracle Corporation.
+
+It was designed to be small, simple, and portable across platforms and operating systems.
+
+It was initially developed for consumer devices. Later it has become a popular platform to develop enterprise applications.
+
+Java 16 is the latest version of Java as of  March 2021. 
+__________________________________________________________________________________________________________________________________
+
+Java comes in various editions to cater to various types of application development needs.
+
+Two key editions of Java are:
+
+Java Standard Edition
+Java Enterprise Edition
+ 
+
+To learn Java programming fundamentals, we need Java SE.
+
+Java SE (Standard Edition)
+
+This edition consists of libraries for building core Java applications.
+
+Java EE (Enterprise Edition)
+
+This edition consists of libraries for building distributed Java applications. These libraries depend on Java SE libraries
+__________________________________________________________________________________________________________________________________________
