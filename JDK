@@ -1,0 +1,11 @@
+Java SE is actually a Java Development Kit (JDK) that comprises of:
+
+Development Tools
+Java Runtime Environment (JRE)
+ 
+
+Development tools include Java compiler (javac.exe) and Java interpreter (java.exe). These tools are required to prepare a Java application for execution.
+
+Java Virtual Machine (JVM) executes a Java application using certain specific libraries and files provided by JRE. JVM is the actual runtime in which a Java application executes.
+
+_______________________________________________________________________________________________________
