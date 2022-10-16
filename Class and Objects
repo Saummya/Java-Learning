@@ -1,0 +1,50 @@
+Java is an Object-Oriented Language.
+
+It means that Java programs are created using the main building blocks like class and 
+object. Java programs apply Object-Oriented principles such as Abstraction, Encapsulation, Inheritance and Polymorphism.
+
+An instance of a class contains its own copy of variables (attributes) and the methods (behavior) with all the other objects of that class.
+Objects collaborate by exchanging messages with one another via method invocations (i.e., invoking each other's behaviors).
+
+Hence through an object-oriented approach, we derive class, state, and behavior.
+
+If a Banking application has to be developed using an object-oriented approach, we need to first identify a set of classes and model their state and behavior.
+
+For Example: If we consider Bank as a class, the major operations it needs to perform are: creating an account, deleting an account, setting the bank location, and contact details.
+
+So we model Bank as a class.
+
+The state of Bank class’s object is specified by its attributes area, phoneNo and account. The methods createAccount(), deleteAccount(), setArea(), setPhoneNo() specifies the behavior of this object.
+
+___________________________________________________________________________________________________
+The class Account defines the state and the behavior of an object. The state is defined by the member variable/attribute balance and the behavior is defined by the member function/method getBalance().
+Look at this example of the Account class.
+
+public class Account {
+  private double balance = 500.00;
+  public double  getBalance(int accountId) {
+    // logic here
+    return balance;
+  }
+  public static void main(String[] args) {
+    Account accnt = new Account();
+    double value = accnt.getBalance(123456);
+    System.out.println("The balance is: " + value);
+  }
+}
+
+Write, compile, and execute this sample code. I will guide you.
+
+public class Account {
+  private double balance = 500.00;    // State/variable
+  public double getBalance(int accountId) { // Behaviour/method
+    // logic here
+    return balance;
+  }
+  public static void main(String[] args) {    // main method
+    Account accnt = new Account();            // Object creation
+    double value = accnt.getBalance(123456);  // Method invocation
+    System.out.println("The balance is: " + value);
+  }
+}
+ 
