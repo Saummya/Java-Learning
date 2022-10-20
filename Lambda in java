@@ -1,0 +1,97 @@
+Lambda Expression is a type of "anonymous" method, which is not bound to any identifier. 
+And so, they do not belong to any class/type. 
+It brings a new and important feature to Java known as "Functional Programming". 
+A Lambda Expression enables a method to be passed as an argument to other methods, as and when required.
+
+Let's take a closer look at the following code for a better understanding
+__________________________________________________
+@FunctionalInterface
+interface Operation{
+	
+    //method providing definition of lambda expression
+    public double calculations(double num1, double num2);                     //Line 1 
+}
+public class Calculator {
+    public static void main(String[] args) {
+    	
+    	//creating lambda expression
+        Operation adder =  (double x, double y)-> x + y;                  //Line 2
+        
+        //executing lambda expression
+        double result = adder.calculations(5, 6);                      //Line 3
+        
+        System.out.println(result);                                 
+    }
+}
+
+__________________________________________________________________
+Here, we have a format for the Lambda Expressions at Line 1, which is derived from the method of Functional Interface Operation. 
+The format defines Lambda Expression to be a method taking two double numbers and returning a double value.
+The actual lambda expression is created at Line 2, and it looks like:
+
+(double x, double y) -> x + y            // Here "->" is the Lambda Operator used to define a Lambda Expression
+
+This Lambda Expression follows the format as derived from the Functional Interface. 
+It takes two double arguments and returns the sum of the two double numbers.
+The Lambda Function is then assigned to an identifier, which has the type of the Functional Interface. 
+The identifier and the functional method of interface is then used to access the Lambda Expression by passing relevant arguments.
+_____________________________________________________________________________
+How to write a Lambda Expression?
+
+Let us consider the previous situation, and write the same functionality using a Class implementing the Functional Interface
+
+//Class
+class AddOperation implements Operation {
+    @Override
+    public double calculations(double num1, double num2) {
+        //Returning the sum of two numbers
+        return num1+num2;
+    }
+}
+
+And now, let's compare it with the code written using Lambda Expression.
+
+//Lambda Expression: Alternative to Regular Method
+Operation adder =  (double num1, double num2)-> num1 + num2;                  
+
+We can observe how compact the code written in Lambda Expression is, compared to that of a class. 
+** We can also observe that the Access Specifiers used in the regular method is dropped in Lambda Expression. 
+This is because, Lambda Expression by definiton does not belong to any class.
+Futhermore, the Argument List should be exactly the same (in terms of number, type and order of arguments) as that of the abstract method in the interface.
+
+
+//Functional Interface method providing format for lambda expression
+public double calculations(double num1,double num2);
+//Lambda Expression created must follow the same format
+Operation adder =  (double num1, double num2) -> num1 + num2;
+Lambda Operator: The arrow token "->" is used as the Lambda Operator to define a Lambda Expression. The Lambda Operator always comes after the argument list.
+
+
+//Lambda Operator after the Argument List
+(double num1, double num2) -> {body}
+Body: The body of the regular method can be simply written after the Lambda Operator as
+
+
+(double num1, double num2) -> {return num1 + num2}
+ 4. Since Java is intelligent enough to deduce the return type based on the input type, 
+ it is not necessary to mention either the return type of Lambda Expression or the return keyword. 
+ And since there is only one statement as the body for the Lambda Expression, the "{}" can be omitted as well.
+ So, the above Lambda Expression can be rewritten as:
+
+(double num1, double num2) -> num1 + num2
+And thus, we obtain the Lambda Expression from the Regular Method for the given situation. 
+Let's move on to the different styles of Lambda Expressions.Let's observe how we can achieve the transition from a class to Lambda Expression. 
+
+The syntax for Lambda Expression is given by:
+
+( arguments ) -> { body }
+The different parts of the syntax can be given as:
+
+Argument List: The arguments in the regular method can be simply rewritten as:
+
+//Arguments in Regular Method 
+public static double adder(double num1, double num2){}
+//Argument List in Lambda Expressions
+(double num1, double num2)
+
+
