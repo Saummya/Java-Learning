@@ -1,0 +1,36 @@
+Based on the number of arguments a Lambda Expression passes, there are three styles of writing Lambda Expressions:
+
+## Zero Parameter Lambda Expression: A Lambda Expression containing no arguments.
+
+() -> System.out.println("No Arguments passed in this Lambda Expression")
+## One Parameter Lambda Expression: A Lambda Expression containing one argument.
+
+//For single parameter () is optional and declaration of type is optional
+/*
+ * Note:
+ * For body consisting only 1 statement, {} is not necessary and
+ * Return keyword must not be used for returning values!
+ */
+num -> num+100                                         
+//If the data type of the single argument has to be declared, then the use of () is compulsory!!!!
+/**
+ * Note:
+ * For body consisting more than 1 statements, {} is needed 
+ * Return keyword is required to be used if any value is to be returned
+ */
+(double rate) -> { rate = rate*100;                                   
+System.out.println("One argument passed: " +rate);
+}
+Multiple Parameter Lambda Expression: A Lambda Expression containing two or more arguments.
+
+//For multiple arguments, declaration is optional only when all arguments are of same type
+//Also the use of () is mandatory when declaring multiple arguments!!!
+(num1, num2, num3) -> System.out.println("Multiple arguments passed: " +num1+","+num2+","+num3)
+
+(int num1, int num2, String result) -> {
+if(num1 + num2 > 100)
+    result="Pass";
+else
+    result="Fail";
+return result;
+}
